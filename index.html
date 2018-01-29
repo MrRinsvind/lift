@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        body{
+            margin:0px;
+        }
+        #container{
+            height: 100vh;
+            width:100%;
+            padding: 0px;
+            margin:0px;
+        }
+        .lift-block{
+            display: flex;
+            width:100%;
+            height: 100%;
+        }
+        .lift-side{
+            width:50%;
+            height: 100%;
+        }
+        .lift-side{
+            width:50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+        .lift-side--left-side{
+            background-color: black;
+            align-items: flex-end;
+        }
+        .lift-side--right-side{
+            background-color: white;
+            align-items: flex-start;
+        }
+
+        .lift-panel{
+            display: flex;
+            flex-direction: column;
+            padding: 0px 32px 0px 0px;
+            margin: 0px;
+            justify-content: flex-start;
+        }
+        .lift-level{
+            height: 34px;
+            margin-bottom: 16px;
+        }
+        .lift-button{
+            height: 34px;
+            width:34px;
+            border:2px solid white;
+            border-radius: 50%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            outline: none;
+        }
+        .lift-button--floor-current{
+            background-color: #7ED321;
+            border:2px solid #7ED321;
+        }
+        .lift-button--floor-move{
+            background-color: #F5A623;
+            border:2px solid #F5A623;
+        }
+        .lift-button--floor-used{
+            border:2px solid red;
+        }
+
+        .level-level{
+            margin-bottom: 16px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .level-panel{
+            padding-left: 32px;
+            padding-top: 122px;
+        }
+        .level-level>*{
+            margin-right: 16px;
+        }
+        .level-button{
+            height: 34px;
+            width:34px;
+            border:2px solid black;
+            border-radius: 50%;
+            background-color: black;
+            cursor: pointer;
+            outline: none;
+            background-repeat: no-repeat;
+            background-size: 60%;
+            background-position: center;
+        }
+        .level-button--move-up{
+            background-image: url('./images/up.svg');
+        }
+        .level-button--status-active{
+            border:2px solid red;
+        }
+        .level-button--move-down{
+            background-image: url('./images/down.svg');
+        }
+        .current-level{
+            width: 100%;
+            text-align: center;
+            font-size: 72px;
+            color:white;
+            display: block;
+            position: relative;
+        }
+        .current-level:after{
+            display: block;
+            width:11px;
+            height: 9px;
+            top:16px;
+            left:calc(50% + 25px);
+            position: absolute;
+            content: '';
+        }
+        .current-level--move-up:after{
+            background-image: url('./images/move.svg');
+            transform: rotate(0deg);
+        }
+        .current-level--move-down:after{
+            background-image: url('./images/move.svg');
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+<div id="container"></div>
+<script src="/static/bundle.js"></script>
+</body>
+</html>
